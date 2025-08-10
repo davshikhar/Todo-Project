@@ -1,0 +1,23 @@
+# Ignore node_modules in both frontend and backend
+todo-frontend/node_modules/
+todo-backend/node_modules/
+
+# Ignore build or dist folders if applicable
+todo-frontend/build/
+todo-backend/build/
+todo-backend/dist/
+
+# Ignore log files
+*.log
+
+# Ignore environment config files
+*.env
+
+# Ignore OS or editor files
+.DS_Store
+.vscode/
+.idea/
+
+#Readme.md of todo-frontend
+todo-frontend/README.md
+
