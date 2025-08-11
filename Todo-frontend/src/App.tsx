@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 
@@ -11,6 +11,7 @@ function App() {
   const [todo, setTodo] = useState<Todo[]>([]);
   const [title, setTitle] = useState<string>('');
   const [priority, setPriority] = useState<string>('');
+  const [dark,setDark] = useState<boolean>(false);
 
   function addTodo() {
     if (title !== null && priority !== null) {
@@ -24,6 +25,16 @@ function App() {
 
   return (
     <div className='m-8 grid gap-2'>
+
+      {/* Theme Toggle Button */}
+      <div className="flex justify-end">
+        <button
+          className="p-2 rounded bg-gray-200 dark:bg-gray-700 hover:opacity-80"
+        >
+          {dark ? "🌞 Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </div>
+
       <div className='border flex flex-col p-4 rounded-lg shadow-lg gap-4'>
         <div className='text-3xl font-bold font-mono text-center'>Add todo</div>
         <label>
@@ -51,9 +62,11 @@ function App() {
             </div>
             <div>
               {todo.filter(item => item.priority === "High").map((c)=>(
-                <div className='border rounded-lg m-2'>
-                  {c.title}<br/>
-                  {c.priority}
+                <div className='border rounded-lg m-3'>
+                  <div className='border rounded-lg bg-blue-500 m-1'>
+                    {c.title}
+                  </div>
+                  <label className='cursor-pointer'><input type="checkbox" value="High" className='border rounded-lg p-1'/><span className='m-2 text-md font-normal'>Completed</span></label><br/>
                 </div>
               ))}
             </div>
@@ -63,8 +76,10 @@ function App() {
             <div>
               {todo.filter(item => item.priority === "Medium").map((c)=>(
                 <div className='border rounded-lg m-2'>
-                  {c.title}<br/>
-                  {c.priority}
+                  <div className='border rounded-lg bg-blue-500 m-1'>
+                    {c.title}
+                  </div>
+                  <label className='cursor-pointer'><input type="checkbox" value="Medium" className='border rounded-lg p-1'/><span className='m-2 text-md font-normal'>Completed</span></label><br/>
                 </div>
               ))}
             </div>
@@ -74,8 +89,10 @@ function App() {
             <div>
               {todo.filter(item => item.priority === "Low").map((c)=>(
                 <div className='border rounded-lg m-2'>
-                  {c.title}<br/>
-                  {c.priority}
+                  <div className='border rounded-lg bg-blue-500 m-1'>
+                    {c.title}
+                  </div>
+                  <label className='cursor-pointer'><input type="checkbox" value="Low" className='border rounded-lg p-1'/><span className='m-2 text-md font-normal'>Completed</span></label><br/>
                 </div>
               ))}
             </div>
