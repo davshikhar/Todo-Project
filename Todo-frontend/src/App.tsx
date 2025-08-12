@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Navbar from './Components/Navbar';
 
 
 interface Todo {
@@ -25,15 +26,16 @@ function App() {
 
   return (
     <div className='m-8 grid gap-2'>
+      <Navbar/>
 
-      {/* Theme Toggle Button */}
+      {/* Theme Toggle Button
       <div className="flex justify-end">
         <button
           className="p-2 rounded bg-gray-200 dark:bg-gray-700 hover:opacity-80"
         >
           {dark ? "🌞 Light Mode" : "🌙 Dark Mode"}
         </button>
-      </div>
+      </div> */}
 
       <div className='border flex flex-col p-4 rounded-lg shadow-lg gap-4'>
         <div className='text-3xl font-bold font-mono text-center'>Add todo</div>
