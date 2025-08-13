@@ -71,7 +71,9 @@ router.get('/', adminMiddleware, async (req, res) => {
 router.get('/:id', adminMiddleware, async (req, res) => {
     // Implement fetching todo by id logic
     const todoId = req.params.id;
-    const singleTodo = await TodoModel.findOne({_id:todoId});
+    const singleTodo = await TodoModel.findOne({_id:todoId}).populate('userId');
+
+    res.status(200).json({todo:singleTodo});
 });
 
 module.exports = router;
