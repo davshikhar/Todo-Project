@@ -63,7 +63,7 @@ router.get('/', adminMiddleware, async (req, res) => {
     // Implement fetching all todo logic
     const id = req.userId;
 
-    const todoList = await TodoModel.find({userId:id});
+    const todoList = await TodoModel.find({userId:id}).populate('userId');
     res.json({message:"Your todos are", todos:todoList});
 
 });
