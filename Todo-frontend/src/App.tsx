@@ -25,9 +25,13 @@ function App() {
   }
 
   return (
-    <div className='m-8 grid gap-2'>
-      <Navbar/>
-
+    <div className='min-h-screen bg-[#7EBCE6] m-0 p-0'>
+      <div className='p-4 shadow-lg'>
+        <Navbar/>
+      </div>
+    
+    <div className='m-8 grid gap-6 pt-2'>
+      
       {/* Theme Toggle Button
       <div className="flex justify-end">
         <button
@@ -37,7 +41,7 @@ function App() {
         </button>
       </div> */}
 
-      <div className='border flex flex-col p-4 rounded-lg shadow-lg gap-4'>
+      <div className='bg-[#69D1C5] border flex flex-col p-4 rounded-lg shadow-lg gap-4'>
         <div className='text-3xl font-bold font-mono text-center'>Add todo</div>
         <label>
           <span className='font-mono text-lg font-semibold'>Enter the name/title:</span>
@@ -55,7 +59,7 @@ function App() {
         </label>
         <div className='flex justify-center'><button className='font-semibold bg-blue-400 border rounded-lg px-8 py-2 cursor-pointer hover:bg-blue-600 me-2 mb-2' onClick={addTodo}>Add</button></div>
       </div>
-      <div className='border rounded-lg shadow-lg p-4'>
+      <div className='bg-[#69D1C5] border rounded-lg shadow-lg p-4'>
         <div className='text-3xl font-bold font-mono text-center'>Todo's displayed here!</div>
         <div className='grid grid-cols-3 m-4 gap-4 text-center'>
           <div>
@@ -102,6 +106,7 @@ function App() {
         </div>
       </div>
 
+    </div>
     </div>
   )
 }

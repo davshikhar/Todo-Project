@@ -4,7 +4,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-700 broder rounded-lg text-white px-6 py-3 flex items-center justify-between">
+    // <nav className="bg-blue-700 broder rounded-lg text-white px-6 py-3 flex items-center justify-between">
+      <nav className="bg-[#3BA99C] broder rounded-lg text-white px-6 py-3 flex items-center justify-between">
       {/* Logo */}
       <div className="text-2xl font-bold">TodoApp</div>
 
