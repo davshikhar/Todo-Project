@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-const Navbar = () => {
+interface NavbarProps {
+  // You can define props here if needed
+  dark:boolean;
+  setDark: (dark: boolean) => void;
+}
+
+const Navbar = (props:NavbarProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -48,6 +54,16 @@ const Navbar = () => {
           >
             About
           </a>
+        </li>
+        <li>
+          <div className="flex justify-end">
+        <button
+          className="p-2 rounded-sm bg-gray-200 dark:bg-gray-700 hover:opacity-80 cursor-pointer"
+          onClick={() => props.setDark(!props.dark)}
+        >
+          {props.dark ? "🌞" : "🌙"}
+        </button>
+      </div>
         </li>
       </ul>
     </nav>

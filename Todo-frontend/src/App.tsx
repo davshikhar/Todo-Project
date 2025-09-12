@@ -28,22 +28,22 @@ function App() {
   return (
     <div className={`min-h-screen m-0 p-0 `+ (dark ? 'bg-[#001A23]' : 'bg-[#E8F1F2]')}>
       <div className='p-4 shadow-lg'>
-        <Navbar/>
+        <Navbar dark={dark} setDark={setDark}/>
       </div>
     
-    <div className='m-8 grid gap-6 pt-2'>
+    <div className='m-8 grid gap-4 pt-2'>
 
       {/* /*Add Dark Mode Toggle Functionality Later*/}
 
       {/* Theme Toggle Button */}
-      <div className="flex justify-end">
+      {/* <div className="flex justify-end">
         <button
           className="p-2 rounded bg-gray-200 dark:bg-gray-700 hover:opacity-80"
           onClick={() => setDark(!dark)}
         >
           {dark ? "🌞" : "🌙"}
         </button>
-      </div>
+      </div> */}
 
       <div className='bg-[#69D1C5] border flex flex-col p-4 rounded-lg shadow-lg gap-4'>
         <div className='text-3xl font-bold font-mono text-center'>Add todo</div>
