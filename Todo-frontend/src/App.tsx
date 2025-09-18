@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Landing } from './Pages/Landing';
+import { Navbar1 } from './Components/Navbar1';
 
 
 interface Todo {
