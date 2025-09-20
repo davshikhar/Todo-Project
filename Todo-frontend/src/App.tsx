@@ -4,9 +4,11 @@ import Navbar from './Components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Landing } from './Pages/Landing';
 import { Navbar1 } from './Components/Navbar1';
+import { Signup } from './Components/Signup';
+import { User } from './Pages/User';
 
 
-interface Todo {
+export interface Todo {
   title: string,
   priority: string
 }
@@ -34,18 +36,6 @@ function App() {
   //     </div>
     
   //   <div className='m-8 grid gap-4 pt-2'>
-
-  //     {/* /*Add Dark Mode Toggle Functionality Later*/}
-
-  //     {/* Theme Toggle Button */}
-  //     {/* <div className="flex justify-end">
-  //       <button
-  //         className="p-2 rounded bg-gray-200 dark:bg-gray-700 hover:opacity-80"
-  //         onClick={() => setDark(!dark)}
-  //       >
-  //         {dark ? "🌞" : "🌙"}
-  //       </button>
-  //     </div> */}
 
   //     <div className='bg-[#69D1C5] border flex flex-col p-4 rounded-lg shadow-lg gap-4'>
   //       <div className='text-3xl font-bold font-mono text-center'>Add todo</div>
@@ -119,6 +109,8 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/home' element={<Landing/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+      <Route path='/user' element={<User/>}/>
       {/* <Route path='*' element={<NotFound/>}/> */}
     </Routes>
     </BrowserRouter>

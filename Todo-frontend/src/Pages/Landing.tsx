@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navbar1 } from "../Components/Navbar1";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Todo{
     title:string,
@@ -127,13 +128,13 @@ export const Landing = () =>{
         </p>
 
         <div className="mt-10 flex items-center justify-center gap-3">
-          <a
-            href="#signin"
+          <Link
+            to="/user"
             className="bg-[#8957f0] inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm ring-1 ring-border/50 hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-ring"
           >
             Sign in
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>

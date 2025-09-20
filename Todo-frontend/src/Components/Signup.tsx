@@ -1,7 +1,7 @@
 
-import GoogleIcon from './google-icon-logo-svgrepo-com.svg'
-import Xicon from './icons8-x.svg'
-import './App.css'
+// import GoogleIcon from './google-icon-logo-svgrepo-com.svg'
+// import Xicon from './icons8-x.svg'
+// import './App.css'
 
 export function Signup() {
 
@@ -15,11 +15,11 @@ export function Signup() {
 
         <div className='flex gap-4 mb-6 mt-4'>
           <button className='flex items-center justify-center w-full py-3 border rounded-lg bg-white hover:bg-gray-100 transition cursor-pointer'>
-            <img src={GoogleIcon} alt="Google logo" className='mr-2 w-5 h-8' />
+            {/* <img src={GoogleIcon} alt="Google logo" className='mr-2 w-5 h-8' /> */}
             <span className='text-gray-700 font-semibold text-md'>Sign up with Google</span>
           </button>
           <button className="flex items-center justify-center w-full py-3 border rounded-xl bg-transparent hover:bg-gray-100 transition cursor-pointer">
-            <img src={Xicon} alt="X icon" className='mr-2 2-5 h-8'/>
+            {/* <img src={Xicon} alt="X icon" className='mr-2 2-5 h-8'/> */}
             <span className="text-gray-700 font-semibold text-md">Sign up with X</span>
           </button>
         </div>
